@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* Custom styles for heading elements */
+h1 {
+    font-size: 2.25rem; /* 36px */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.875rem; /* 30px */
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+h5 {
+    font-size: 1rem; /* 16px */
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+}
+
+h6 {
+    font-size: 0.875rem; /* 14px */
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+}
+
+
+header a{
+    color: black;
+}
+
+
+main.container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+button.btn-primary{
+    @apply bg-primaryColor border-0 hover:bg-hover;
+}
+
+.filter .collapse {
+    visibility: visible;
+}
+
+@media (max-width:565px){
+    .container{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    main.container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    #filter{
+        transition: all 0.3s;
+        background-color: #f8faff;
+        padding: 16px;
+        border-radius: 0px 0px 8px 8px;
+    }
+
+    .filter-col a[aria-expanded="true"] > div{
+        border-radius: 4px 4px 0px 0px !important;
+    }
+    .category-card {
+        border-radius: 12px !important;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.275rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+
+    h3 {
+        font-size: 1.0rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+
+    h4 {
+        font-size: 1.0rem;
+        font-weight: 500;
+        margin-bottom: 0.25rem;
+    }
+}
+
+.product-detail {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.object-fit-cover{
+    object-fit: cover;
+}
+
+
+h4, .fs-4 {
+    font-weight: 600;
+}
+
+.manufacturer-filter button {
+    background: none;
+    max-height: 100px;
+    border: 5px solid transparent;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+}
+
+.manufacturer-filter button:focus{
+    outline: none;
+}
+
+.manufacturer-filter button.active, .manufacturer-filter button:hover {
+    border: 5px solid rgba(13,110,253,.35);
+}
+
+
+.filter-col a[aria-expanded="true"] i.fa-chevron-down{
+    transform: rotate(180deg);
+}
+
+
+.manufacturer-filter button:first-of-type{
+    height: 100%;
+    width: 100%;
+}
+
+.category-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-image-placeholder {
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+}
+
+
+
+.admin-product-listing .product-row{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 120px ;
+    gap: 32px;
+}
+
+.admin-product-listing .product-row.heading{
+    font-weight: 700;
+}
+
+.admin-product-listing .product-row:not(.heading){
+    box-shadow: 0px 2px 8px 0px rgba(207, 207, 207, 0.34);
+    border-radius: 6px;
+}
+
+.action-button-wraper{
+    position: relative;
+}
+
+.action-button-wraper .custom-tooltip {
+    font-size: 10px;
+    opacity: 0;
+    transform: translateY(-8px);
+    position: absolute;
+    transition: all 0.2s ease;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+.action-button-wraper:hover .custom-tooltip {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.action-button-wraper i{
+    transition: all 0.2s ease;
+}
+
+.action-button-wraper:hover i {
+    color: inherit;
+}
+
+.action-button-wraper a:hover{
+    color: inherit;
+}
+
+.kosik i{
+    font-size: 10px;
+    line-height: 12px;
+    top: -8px;
+    right: -12px;
+    padding: 1px 4px;
+    border-radius: 100%;
+    background-color: black;
+    color: white;
+}
+
+#cardInfoBadge {
+    position: absolute;
+    font-size: 12px;
+    line-height: 12px;
+    top: -8px;
+    right: -12px;
+    padding: 2px 4px;
+    border-radius: 100%;
+    background-color: black;
+    color: white;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
